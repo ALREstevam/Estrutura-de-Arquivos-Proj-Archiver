@@ -10,7 +10,7 @@ Archiver desenvolvido em Python para a disciplina de Estrutura de Arquivos
 * Trabalho: em grupos de até 5 pessoas.
 * **Objetivo:** Implementar um programa arquivador, ou seja, um gerenciador de archives.
 
-###Descrição:
+### Descrição:
 Um archive é um “arquivo de arquivos”; ou seja, é um arquivo que contém uma coleção de outros
 arquivos, em uma estrutura que torna possível recuperar individualmente cada arquivo nele
 armazenado [1]. Um arquivador (archiver) é um programa que permite criar e modificar archives, bem
@@ -23,7 +23,7 @@ uso:
 * C4. Inserir um arquivo em um archive já criado.
 * C5. Remover um arquivo de um archive, dado o nome do arquivo.
 
-###Relatório:
+### Relatório:
 O programa deve vir acompanhado de relatório sobre quais casos de uso foram implementados, e
 respectivas comprovações (trecho de código e tela de execução).
 Data de entrega: vide cronograma da disciplina.
