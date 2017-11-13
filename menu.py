@@ -10,7 +10,7 @@ class Menu(object) :
         while((i<0) | (i>self.options.__len__())) :
             for i in range(0,self.options.__len__()) :
                 print(i, " - ", self.options[i])
-                print("***Choose between 0 and ",self.options.__len__()-1,"**")
+            print("***Choose between 0 and ",self.options.__len__()-1,"**")
             buffer = 0
             buffer = input()
             i = int (buffer)
