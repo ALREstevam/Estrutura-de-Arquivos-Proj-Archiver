@@ -11,13 +11,18 @@ import os
 import struct
 import sys
 
-maxfnameSize = 244
 miniHeaderSize = 256
-elemSize = 256
+miniHeaderTrashSize = 0
 
+sizeOfLongLong = len(struct.pack('q', 0))
+sizeOfInteger = len(struct.pack('i', 0))
+sizeOfUnsignedInteger = len(struct.pack('I', 0))
+
+maxfnameSize = 256 - (2 * sizeOfLongLong + sizeOfInteger)
+elemSize = maxfnameSize + 2 * sizeOfLongLong + sizeOfInteger
 
 class HeaderElement:
-    def __init__(self, fsize, fpos, fname, nextdeleted = -1):
+    def __init__(self, fsize, fpos, fname, nextdeleted =-1):
         self.nextdeleted = nextdeleted
         self.fsize = fsize
         self.fPos = fpos
@@ -51,13 +56,13 @@ class Packer:
 
     def __init__(self, archiveName):
         self.archiveName = archiveName
+        self.headerPat = '=i q q ' + str(maxfnameSize) + 's'
 
     # Initiates the file
     def initFile(self):
         try:
             file = open(self.archiveName, 'wb')
-            packedData = struct.pack('I  252s', 0, b'*')
-            print(len(packedData))
+            packedData = struct.pack('=I' + str(256 - sizeOfUnsignedInteger) + 's', 0, b'*')
             file.write(packedData)
             file.close()
         except:
@@ -106,7 +111,6 @@ class Packer:
             input()
             exit(-1)
 
-
     # Return how many elements there are into the big header
     def elemsInHeader(self):
         return self.readElemsInHeader()
@@ -119,7 +123,7 @@ class Packer:
             unpackedData = struct.unpack('I', packedData)
             headerElements = unpackedData[0]
             return headerElements
-        except Exception:
+        except Exception as e:
             print('Error occurred while reading the header.')
             input()
             exit(-1)
@@ -127,8 +131,7 @@ class Packer:
     def appendToHeader2(self, headElem):
         headerElemsCount = self.elemsInHeader()
         tup = (headElem.nextdeleted, headElem.fPos, headElem.fsize, headElem.fname)
-        formatation = 'i l l 244s'
-        st = struct.Struct(formatation)
+        st = struct.Struct(self.headerPat)
         packedData = st.pack(*tup)
         self.updtHeaderElemAmount(self.elemsInHeader(), 1)
 
@@ -162,7 +165,7 @@ class Packer:
 
             for i in range(elemAmount):
                 data = file.read(elemSize)
-                unpackedData = struct.unpack('i l l 244s', data)
+                unpackedData = struct.unpack(self.headerPat, data)
                 headElem = HeaderElement(unpackedData[2], unpackedData[1],
                                          unpackedData[3].decode('utf-8').rstrip(' \t\r\n\0'), unpackedData[0])
                 headerElements.append(headElem)
@@ -178,7 +181,7 @@ class Packer:
             file = open(self.archiveName, 'r+b')
             file.seek(miniHeaderSize + elemSize * rrn)
             tup = (newHeader.nextdeleted, newHeader.fPos, newHeader.fsize, newHeader.fname)
-            formatation = 'i l l 244s'
+            formatation = self.headerPat
             st = struct.Struct(formatation)
             packedData = st.pack(*tup)
             file.write(packedData)
@@ -206,14 +209,14 @@ class Packer:
         count = 0
         for header in headers:
             if header.fnameStr == fname:
-                header.nextdeleted = 0
+                header.nextdeleted = -1
                 self.updateHeader(header, count)
                 return True
             count += 1
         return False
 
     def unpack(self, headerElem):
-        if headerElem.nextDeleted >= 0:
+        if headerElem.nextdeleted >= 0:
             return False
 
         relativePos = headerElem.fPos
@@ -320,7 +323,7 @@ class TextInterface:
         self.pk = Packer(self.archiveName)
         self.util = Util(self.archiveName)
 
-        print('\n\n\n{:^50}'.format('--- PYVER BASH ---'))
+        print('\n\n\n{:^50}\n'.format('***[ PYVER BASH ]***'))
         print('Selected archive: [{}]'.format(self.archiveName))
 
         print('\nTip: type `help` for displaying the help message.')
@@ -328,6 +331,11 @@ class TextInterface:
         while True:
             inpt = self.getUserInput()
             inpt[0] = inpt[0].lower()
+
+            if len(inpt) == 1:
+                inpt.append('')
+
+
 
             ## EXIT
             if inpt[0] == 'exit' or inpt[0] == 'close':
@@ -347,12 +355,15 @@ class TextInterface:
             ## FILE IS IN THE ARCHIVE
             elif inpt[0] == 'exists':
                 pk = self.pk
-                if pk.getHeaderByfname(inpt[1]):
-                    rsp = '[ Yes ]'
-                    print(rsp)
-                else:
-                    rsp = '[ No  ]'
-                    print(rsp)
+                try:
+                    if pk.getHeaderByfname(inpt[1]):
+                        rsp = '[ Yes ]'
+                        print(rsp)
+                    else:
+                        rsp = '[ No  ]'
+                        print(rsp)
+                except:
+                    print('An error occurred while looking for the file [{}] in the archive\'s header.'.format(inpt[1]))
 
             ## LIST FILES
             elif inpt[0] == 'list' or inpt[0] == 'ls':
@@ -409,7 +420,8 @@ class TextInterface:
 
 
     def printHelp(self):
-        print('\nCommands'.upper())
+        print('\n{:^94}'.format('[ COMMANDS ]'))
+        print('-'*94)
         print("{:42}  {:50}".format('help     hlp', 'prints this list'))
         print("{:42}  {:50}".format('exit     close', 'closes the bash'))
         print("{:42}  {:50}".format('list     ls', 'lists the stored files'))
@@ -442,7 +454,6 @@ class TextInterface:
                     str(header.nextdeleted > -1)
                 )
             )
-
             count += 1
         print('\n')
 
@@ -471,5 +482,5 @@ class TextInterface:
         return str(input('\n\n>> ')).split(' ')
 
 
-# sys.argv = ['', 'init', 'afile.pyver']
+sys.argv = ['', 'init', 'afile'] #uncomment this for debug
 userTextInterface = TextInterface()

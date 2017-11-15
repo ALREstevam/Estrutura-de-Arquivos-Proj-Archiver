@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0819dd43-44c4-429a-b742-71defc1dcfdd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/arch.ar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/archiver.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fteste.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jirojorel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pessoas.cod" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sampeFile.x" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sample2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/afile.pyver.pyver" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Thumbs.db" afterPath="$PROJECT_DIR$/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a.txt" afterPath="$PROJECT_DIR$/a.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fileReadTest/reader.py" afterPath="$PROJECT_DIR$/fileReadTest/reader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afile.pyver" afterPath="$PROJECT_DIR$/afile.pyver" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample.py" afterPath="$PROJECT_DIR$/sample.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +17,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Estrutura-de-Arquivos-Proj-Archiver$testdir.coverage" NAME="testdir Coverage Results" MODIFIED="1510767064722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/olds" />
-    <SUITE FILE_PATH="coverage/Estrutura-de-Arquivos-Proj-Archiver$sample.coverage" NAME="sample Coverage Results" MODIFIED="1510767396978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Estrutura-de-Arquivos-Proj-Archiver$sample.coverage" NAME="sample Coverage Results" MODIFIED="1510774273803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Estrutura-de-Arquivos-Proj-Archiver$fileReader.coverage" NAME="fileReader Coverage Results" MODIFIED="1510139857697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Estrutura-de-Arquivos-Proj-Archiver$reader.coverage" NAME="reader Coverage Results" MODIFIED="1510141453500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fileReadTest" />
     <SUITE FILE_PATH="coverage/Estrutura-de-Arquivos-Proj-Archiver$sample2.coverage" NAME="sample2 Coverage Results" MODIFIED="1510141741914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -48,8 +42,8 @@
       <file leaf-file-name="sample.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-442">
-              <caret line="367" column="19" lean-forward="false" selection-start-line="367" selection-start-column="19" selection-end-line="367" selection-end-column="19" />
+            <state relative-caret-position="88">
+              <caret line="470" column="28" lean-forward="true" selection-start-line="470" selection-start-column="28" selection-end-line="470" selection-end-column="28" />
               <folding>
                 <element signature="e#366#375#0" expanded="true" />
               </folding>
@@ -85,9 +79,11 @@
       <find>delFi</find>
       <find>del</find>
       <find>absolutePos</find>
-      <find>print</find>
       <find>pack</find>
+      <find>unpack</find>
       <find>unpack(</find>
+      <find>appendHe</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -543,16 +539,16 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36838123" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50075644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41384864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252818" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993559" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06641221" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06580938" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23832528" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -573,16 +569,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#366#375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sampeFile.x" />
     <entry file="file://$PROJECT_DIR$/archiver.py" />
     <entry file="file://$PROJECT_DIR$/sample2.py" />
@@ -730,7 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="979" column="44" lean-forward="true" selection-start-line="977" selection-start-column="8" selection-end-line="979" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,18 +737,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sampeFile.x" />
     <entry file="file://$PROJECT_DIR$/tables.py" />
-    <entry file="file://$PROJECT_DIR$/olds/testdir.py">
+    <entry file="file://$PROJECT_DIR$/olds/testdir.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/537891552/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="197">
+          <caret line="3573" column="8" lean-forward="false" selection-start-line="3573" selection-start-column="8" selection-end-line="3573" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="367" column="19" lean-forward="false" selection-start-line="367" selection-start-column="19" selection-end-line="367" selection-end-column="19" />
+        <state relative-caret-position="88">
+          <caret line="470" column="28" lean-forward="true" selection-start-line="470" selection-start-column="28" selection-end-line="470" selection-end-column="28" />
           <folding>
             <element signature="e#366#375#0" expanded="true" />
           </folding>
