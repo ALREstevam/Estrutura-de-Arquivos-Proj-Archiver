@@ -40,6 +40,6 @@ def toOutput(originalFileName, newFileName,):
 initialize()
 toOutput('orig.bin', 'out.bin')
 toOutput('orig.txt', 'out.txt')
-toOutput('img.png', 'outimg.png')
+toOutput('img1.png', 'outimg.png')
 toOutput('index.html', 'outIndex.html')
 
